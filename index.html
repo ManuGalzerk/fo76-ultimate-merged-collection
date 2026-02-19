@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FO76 Ultimate Merged Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        
+        body {
+            font-family: 'VT323', monospace;
+            background: #0a0a0a;
+            color: #00ff41;
+        }
+        
+        .scanlines {
+            position: relative;
+        }
+        .scanlines::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                transparent 2px,
+                rgba(0,0,0,0.15) 2px,
+                rgba(0,0,0,0.15) 4px
+            );
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .pip-border {
+            border: 4px solid #00ff41;
+            box-shadow: 0 0 30px #00ff41, inset 0 0 20px rgba(0,255,65,0.3);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+        }
+
+        .terminal-header {
+            background: linear-gradient(to right, #111, #333, #111);
+        }
+    </style>
+</head>
+<body class="scanlines min-h-screen">
+    <!-- NAVBAR -->
+    <nav class="terminal-header py-4 border-b-4 border-[#00ff41]">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-3xl">
+            <div class="flex items-center gap-4">
+                <span class="text-amber-400">▶</span>
+                <span class="glow-text">VAULT-TEC</span>
+                <span class="text-white">APPROVED</span>
+            </div>
+            <div class="flex gap-8 text-2xl">
+                <a href="#install" class="hover:text-amber-400 transition">INSTALL GUIDE</a>
+                <a href="#configs" class="hover:text-amber-400 transition">CONFIGS</a>
+                <a href="#discord" class="hover:text-amber-400 transition">DISCORD</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.alphacoders.com/134/1345641.jpg')] bg-cover bg-center opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+        
+        <div class="relative text-center z-10 px-6">
+            <h1 class="text-8xl font-bold tracking-widest glow-text mb-4">FO76</h1>
+            <h2 class="text-6xl text-amber-400 mb-6">ULTIMATE MERGED COLLECTION</h2>
+            <p class="text-4xl max-w-3xl mx-auto mb-12">QOL + Performance • 4 collections merged • Conflicts fixed • Custom SFE</p>
+            
+            <div class="flex gap-6 justify-center">
+                <a href="#install" onclick="document.getElementById('install').scrollIntoView({behavior:'smooth'})"
+                   class="px-12 py-6 bg-[#00ff41] text-black text-4xl hover:bg-amber-400 transition font-bold">START INSTALLATION</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 text-2xl animate-pulse">▼ SCROLL FOR INSTRUCTIONS ▼</div>
+    </header>
+
+    <!-- IMPORTANT RE SHADE SECTION -->
+    <section id="install" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="pip-border bg-black/90 p-12">
+            <h2 class="text-6xl text-center mb-12 glow-text text-red-500">!!! MOST IMPORTANT STEP FIRST !!!</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 text-3xl">
+                <div>
+                    <h3 class="text-amber-400 text-4xl mb-6">1. ReShade 6.6.2 + Addons</h3>
+                    <p class="mb-6">Download <strong>exactly version 6.6.2 with full addon support</strong>:</p>
+                    <a href="https://reshade.me/downloads/ReShade_Setup_6.6.2_Addon.exe" target="_blank"
+                       class="block bg-red-600 hover:bg-red-700 text-white text-4xl py-8 px-12 text-center mb-8">DOWNLOAD ReShade 6.6.2 ADDON</a>
+                    <ul class="list-disc pl-8 space-y-4 text-2xl">
+                        <li>Run the installer for Fallout76.exe then Directx10/11/12</li>
+                        <li><strong>During installation select:</strong> <span class="text-amber-400">shaderToggle by Otis_Inf</span></li>
+                        <li>Go to Game Folder and rename dxgi.dll to d3d11.dll this remove the overlay of STEAM</li>
+                        <li>Finish and start the game once to create the folder</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-amber-400 text-4xl mb-6">2. Unofficial SFE Patch</h3>
+                    <p class="mb-6">Download the patched SFE for Steam 1.7.23.16:</p>
+                    <a href="https://drive.google.com/file/d/1Z6f8Lum1rcF8eyQ03_MeAgTaRLusLSSf/view?usp=drive_link" target="_blank"
+                       class="block bg-amber-400 text-black text-4xl py-8 px-12 text-center">DOWNLOAD SFE PATCH</a>
+                    <p class="mt-8 text-red-400 text-2xl">Note: Text chat may not work. Useful for PLM and other mods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="bg-black/80 py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-6xl mb-12 text-center">COLLECTION DETAILS</h2>
+            <div class="text-3xl space-y-8">
+                <p>Merged & optimized from:</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-amber-400">
+                    <li>• FO76 - QOL & Enhanced Performance</li>
+                    <li>• Hak's Mod Collection (Season 21)</li>
+                    <li>• Main1272025</li>
+                    <li>• PatrickJrs Collection</li>
+                </ul>
+                <p>All conflicts removed, configs fixed, Optimized!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CONFIGS -->
+    <section id="configs" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="pip-border bg-black/90 p-12 text-center">
+            <h2 class="text-6xl mb-12 glow-text">DOWNLOAD ALL CONFIGS</h2>
+            <button onclick="showDownloadModal()"
+                    class="px-16 py-8 bg-[#00ff41] hover:bg-white text-black text-5xl font-bold transition transform hover:scale-105">
+                DOWNLOAD ALL CONFIGS RAR
+            </button>
+            <p class="mt-8 text-2xl text-amber-400">All configs already organized exactly as they must stay</p>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="hidden fixed inset-0 bg-black/95 flex items-center justify-center z-50">
+        <div class="pip-border bg-black max-w-3xl w-full mx-4 p-8 relative">
+            <button onclick="hideModal()" class="absolute top-4 right-4 text-4xl text-red-500 hover:text-white">✕</button>
+            
+            <h3 class="text-5xl text-center mb-8 glow-text">CONFIGS INSTALLATION README</h3>
+            
+            <div class="text-2xl leading-relaxed space-y-6 text-left">
+                <p>I have divided all the configs exactly as they should be.</p>
+                <p class="text-amber-400">PLEASE LEAVE THEM AS IS.</p>
+                <p>Do not rename folders or files unless the individual mod requires it.</p>
+                
+                <div class="border-l-4 border-amber-400 pl-6">
+                    <p class="text-red-400">If you have problems:</p>
+                    <ol class="list-decimal pl-8 space-y-2 mt-4">
+                        <li>Use ChatGPT / Grok / Gemini / any good AI (send your load order + error logs)</li>
+                        <li>If still stuck → contact me on Discord : galzerk</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <a href="https://github.com/ManuGalzerk/fo76-ultimate-merged-collection/raw/main/All_Configs.rar"
+                   onclick="hideModal(); setTimeout(() => alert('Download started!'), 300)"
+                   class="px-12 py-6 bg-amber-400 text-black text-4xl hover:bg-white transition">
+                    DOWNLOAD All_Configs.rar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- DISCORD -->
+    <section id="discord" class="py-20 bg-black text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-6xl mb-8">Need help?</p>
+            <a href="https://discord.gg/TUO-DISCORD-LINK" target="_blank"
+               class="inline-block px-16 py-8 bg-[#5865F2] text-white text-5xl hover:bg-white hover:text-[#5865F2] transition">JOIN DISCORD</a>
+            <p class="mt-8 text-3xl">Write me directly – I answer fast!</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t-4 border-[#00ff41] text-center text-xl">
+        <p>Made with ❤️ for the Wasteland • Vault-Tec 2026</p>
+    </footer>
+
+    <script>
+        function showDownloadModal() {
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+        function hideModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
+        }
+        
+        // Tailwind script already loaded
+        console.log('%cFO76 Ultimate Collection - Ready', 'color:#00ff41; font-size:20px');
+    </script>
+</body>
+</html>
